@@ -27,3 +27,14 @@ Open [http://localhost:3000/][app] in your favorite web browser
 [tracking-js]: https://trackingjs.com/
 [ms-face-api]: https://www.microsoft.com/cognitive-services/en-us/face-api/documentation/overview
 [ms-sign-up]: https://www.microsoft.com/cognitive-services/en-us/sign-up
+
+TODO
+ - update README
+ - move to gradle
+ - move api-client to scala
+ - move to yarn
+ - working watch
+ - refresh on live in dev mode
+ - add mobX with debug options
+ - add application.yaml as configuration
+ 

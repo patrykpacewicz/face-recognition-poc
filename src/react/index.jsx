@@ -10,5 +10,5 @@ import './index.css';
 injectTapEventPlugin();
 
 ReactDOM.render(
-  <App />, document.getElementById('app')
+    <App />, document.getElementById('app')
 );
