@@ -1,18 +1,24 @@
-import Unirest from 'unirest/index';
-
 export class FaceRecognitionLocalProxyClient {
   constructor() {
-    this.url = '/api/face/v1.0/detect';
+    this.url = '/proxy/face/v1.0/detect' +
+        '?returnFaceId=false' +
+        '&returnFaceLandmarks=false' +
+        '&returnFaceAttributes=age,gender,smile,facialHair,glasses';
   }
 
   detect = (imageUrl, responseOk, responseError = (body, status) => {}) => {
-    Unirest
-      .post(this.url)
-      .headers({'Content-Type': "text/html"})
-      .send(imageUrl)
-      .end((response) => {
-        if (response.status !== 200) { responseError(response.body, response.status); }
-        else { responseOk(response.body); }
-      });
+    let data = imageUrl.toString();
+    let str = data.substring(data.indexOf(",") + 1);
+
+    fetch(this.url, {
+      method: 'POST',
+      headers: { 'Content-Type': "application/octet-stream" },
+      body: new Buffer(str, 'base64')
+    }).then((response) => {
+      response.json().then((json) => {
+        if (response.status !== 200) { responseError(json, response.status); }
+        else { responseOk(json); }
+      }).catch( (error) => responseError(error, -1));
+    }).catch( (error) => responseError(error, -2));
   }
 }

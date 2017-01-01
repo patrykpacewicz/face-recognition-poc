@@ -30,11 +30,14 @@ Open [http://localhost:3000/][app] in your favorite web browser
 
 TODO
  - update README
- - move to gradle
- - move api-client to scala
- - move to yarn
- - working watch
  - refresh on live in dev mode
  - add mobX with debug options
- - add application.yaml as configuration
+ - obsługa błędów
  
+DONE
+ - add application.yaml as configuration
+ - move to gradle
+ - move api-client to scala
+ - spring-boot as proxy
+ - move to yarn
+ - working watch
