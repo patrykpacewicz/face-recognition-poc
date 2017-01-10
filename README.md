@@ -30,14 +30,17 @@ Open [http://localhost:3000/][app] in your favorite web browser
 
 TODO
  - update README
- - refresh on live in dev mode
  - add mobX with debug options
  - obsługa błędów
  
 DONE
+ - obsługa wersjonowania assetów 
  - add application.yaml as configuration
  - move to gradle
  - move api-client to scala
  - spring-boot as proxy
  - move to yarn
  - working watch
+
+ - Only working on SSL:
+   -- https://www.drissamri.be/blog/java/enable-https-in-spring-boot/

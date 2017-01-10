@@ -1,8 +1,13 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: './src/react/index.jsx',
-    output: { path: __dirname + '/build/resources/main/public/static', filename: 'bundle.js' },
+    output: {
+        path: __dirname + '/build/resources/main/public',
+        filename: 'static/[chunkhash:8].bundle.js',
+        chunkFilename: 'static/[contenthash:8].bundle.chunk.js'
+    },
     module: {
         loaders: [
             {
@@ -28,7 +33,11 @@ module.exports = {
         extensions: ['.js', '.json', '.jsx', '']
     },
     plugins: [
-        new ExtractTextPlugin('styles.css')
+        new ExtractTextPlugin('static/[contenthash:8].styles.css'),
+        new HtmlWebpackPlugin({
+            inject: true,
+            template: "build/resources/main/index.html"
+        })
     ],
     node: {
         fs: 'empty',

@@ -45,6 +45,7 @@ test {
     maxParallelForks = 1
 }
 
+npm_run_build.dependsOn(processResources)
 npm_run_build.dependsOn(yarn)
-processResources.dependsOn(npm_run_build)
+classes.dependsOn(npm_run_build)
 npmWatch.dependsOn(npm_run_build)
