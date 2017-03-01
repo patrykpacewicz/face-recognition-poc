@@ -93,3 +93,5 @@ fabric.properties
 
 /application.yaml
 /application.yml
+
+/.vscode
