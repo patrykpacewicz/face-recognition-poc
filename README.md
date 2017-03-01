@@ -40,12 +40,11 @@ SPRING_PROFILES_ACTIVE="local" ./gradlew run
 Start watch js files and update them after changes for development
 ```bash
 # run watch using gradle
-./gradlew npm_run_watch
+./gradlew npmWatch
 
 # or you can run watch using npm
 npm run watch
 ```
-
 
 [app]: http://localhost:8080/
 [tracking-js]: https://trackingjs.com/
@@ -64,7 +63,8 @@ DONE
  - move to gradle
  - move api-client to scala
  - spring-boot as proxy
- - move to yarn
+ - (DEL) move to yarn
+ - (DEL) use mobx
  - working watch
 
  - Only working on SSL:
