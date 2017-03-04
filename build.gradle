@@ -23,11 +23,11 @@ dependencies {
     compile 'com.fasterxml.jackson.module:jackson-module-scala_2.11:2.8.4'
     compile 'org.apache.httpcomponents:httpclient:4.5.2'
 
+    compile 'com.github.tomakehurst:wiremock:2.4.1'
+
     // tests
     testCompile 'org.scalatest:scalatest_2.11:3.0.1'
     testCompile 'org.springframework.boot:spring-boot-starter-test:1.4.3.RELEASE'
-    testCompile 'com.github.tomakehurst:wiremock:2.4.1'
-
     testRuntime 'org.pegdown:pegdown:1.6.0'
 }
 

@@ -1,0 +1,33 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPath": "/face/v1.0/detect"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": [
+      {
+        "faceRectangle": {
+          "top": 10,
+          "left": 10,
+          "width": 48,
+          "height": 48
+        },
+        "faceAttributes": {
+          "smile": 0.0,
+          "gender": "male",
+          "age": 33.3,
+          "facialHair": {
+            "moustache": 0.5,
+            "beard": 0.6,
+            "sideburns": 0.6
+          },
+          "glasses": "NoGlasses"
+        }
+      }
+    ]
+  }
+}
