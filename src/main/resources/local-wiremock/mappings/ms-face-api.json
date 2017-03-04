@@ -1,4 +1,7 @@
 {
+  "scenarioName": "ms-face-api",
+  "requiredScenarioState": "Started",
+  "newScenarioState": "Fail1",
   "request": {
     "method": "POST",
     "urlPath": "/face/v1.0/detect"

@@ -1,0 +1,21 @@
+{
+  "scenarioName": "ms-face-api",
+  "requiredScenarioState": "Fail1",
+  "newScenarioState": "Fail2",
+  "request": {
+    "method": "POST",
+    "urlPath": "/face/v1.0/detect"
+  },
+  "response": {
+    "status": 400,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "error":{
+        "code":"BadArgument",
+        "message":"Request body is invalid."
+      }
+    }
+  }
+}

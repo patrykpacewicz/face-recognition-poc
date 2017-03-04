@@ -1,0 +1,21 @@
+{
+  "scenarioName": "ms-face-api",
+  "requiredScenarioState": "Fail2",
+  "newScenarioState": "Started",
+  "request": {
+    "method": "POST",
+    "urlPath": "/face/v1.0/detect"
+  },
+  "response": {
+    "status": 429,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "error":{
+        "statusCode": 429,
+        "message": "Rate limit is exceeded. Try again in 26 seconds."
+      }
+    }
+  }
+}
