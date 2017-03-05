@@ -6,6 +6,7 @@ plugins {
 }
 
 sourceCompatibility = 1.8
+mainClassName = 'pl.ppac.face.Application'
 
 repositories {
     mavenCentral()
@@ -30,8 +31,6 @@ dependencies {
     testCompile 'org.springframework.boot:spring-boot-starter-test:1.4.3.RELEASE'
     testRuntime 'org.pegdown:pegdown:1.6.0'
 }
-
-mainClassName = 'pl.ppac.face.Application'
 
 task wrapper(type: Wrapper) {
     gradleVersion = '3.2.1'

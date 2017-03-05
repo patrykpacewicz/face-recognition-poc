@@ -37,6 +37,9 @@ Start www frontend application with local configuration
 SPRING_PROFILES_ACTIVE="local" ./gradlew run
 ```
 
+Local testing will give you mocked ms-face-api, so you can work
+even without ms-face-api account. ms-face-api will return ok-fail1-fail2-...
+
 Start watch js files and update them after changes
 ```bash
 # run watch using gradle
@@ -52,7 +55,6 @@ TODO
   -- Only working on SSL:
     --- https://www.drissamri.be/blog/java/enable-https-in-spring-boot/
  - add errors info in views
- - add local testing without ms-api
  - add unit tests to view
 
 [app]: http://localhost:8080/
