@@ -16,7 +16,7 @@ export class FaceRecognitionLocalProxyClient {
       body: new Buffer(str, 'base64')
     }).then((response) => {
       response.json().then((json) => {
-        if (response.status !== 200) { responseError(json, response.status); }
+        if (response.status !== 200) { responseError(json.error, response.status); }
         else { responseOk(json); }
       }).catch( (error) => responseError(error, -1));
     }).catch( (error) => responseError(error, -2));

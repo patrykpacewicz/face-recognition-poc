@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { FaceRecognitionLocalProxyClient } from './lib/FaceRecognitionClient'
 
 import {Card, CardActions, CardHeader, CardMedia} from 'material-ui/Card';
+import Snackbar from 'material-ui/Snackbar';
 import Toggle from 'material-ui/Toggle';
 import Video from './Video'
 import async from 'async';
@@ -11,7 +12,8 @@ export default class VideoCard extends Component {
   state = {
     isFaceMarkingOn: false,
     isFaceRecognitionOn: false,
-    lastFaceChange: []
+    lastFaceChange: [],
+    snackbarMsg: ""
   }
 
   constructor(props) {
@@ -40,8 +42,14 @@ export default class VideoCard extends Component {
     async.map(data, (d, callback) => {
       this.client.detect(d.imageUrl, (dataa) => {
         callback(null, {imageUrl: d.imageUrl, position: dataa[0].faceAttributes});
+      }, (err, status) => {
+        this.setState({snackbarMsg: "MS-FACE-API (" + status + "): " + err.message})
       });
     }, (err, data) => this.props.onRecognition(data));
+  }
+
+  snackbarClose = () => {
+      this.setState({snackbarMsg: ""})
   }
 
   render() {
@@ -59,6 +67,12 @@ export default class VideoCard extends Component {
           <Toggle label="Face marking" labelPosition="right" onToggle={this.toogleFaceMarkingOn} />
           <Toggle label="Face recognition" labelPosition="right" onToggle={this.toogleFaceRecognitionOn} />
         </CardActions>
+        <Snackbar
+            open={!!this.state.snackbarMsg}
+            message={this.state.snackbarMsg}
+            onRequestClose={this.snackbarClose}
+            autoHideDuration={4000}
+        />
       </Card>
     )
   }
