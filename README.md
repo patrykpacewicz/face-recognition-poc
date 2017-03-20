@@ -3,7 +3,7 @@ face-recognition-poc
 I was asked to check how difficult it will be to make a simple 
 application for face recognition. And this is the PoC of that research.
 
-![Example](https://raw.githubusercontent.com/patrykpacewicz/face-recognition-poc/master/doc/gif/pwmfXfAxSO.gif)
+![Example][example-gif]
 
 Libraries
 ---------
@@ -11,6 +11,8 @@ I'm using [tracking.js][tracking-js] library for face detection
 and [Microsoft Cognitive-Services Face API][ms-face-api] for face recognition. 
 To use Face API you have to [register][ms-sign-up] and generate API key. 
 It is not a problem because API is free for 30K calls per month :-).
+
+Scala and Spring boot are used as a backend server
 
 How to run
 ----------
@@ -31,7 +33,7 @@ SPRING_PROFILES_ACTIVE="prod" ./gradlew run
 Open [http://localhost:8080/][app] in your favorite web browser
 
 How to run in local mode
-----------------------
+------------------------
 Start www frontend application with local configuration
 ```bash
 SPRING_PROFILES_ACTIVE="local" ./gradlew run
@@ -49,15 +51,14 @@ Start watch js files and update them after changes
 npm run watch
 ```
 
-TODO
- - update README
-  -- add errors info in views
-  -- spring-boot as proxy
-  -- Only working on SSL:
-    --- https://www.drissamri.be/blog/java/enable-https-in-spring-boot/
- - add unit tests to view
+How to run in SSL
+-----------------
+Application in production environment will need SSL configuration. 
+
+ - https://www.drissamri.be/blog/java/enable-https-in-spring-boot/
 
 [app]: http://localhost:8080/
 [tracking-js]: https://trackingjs.com/
 [ms-face-api]: https://www.microsoft.com/cognitive-services/en-us/face-api/documentation/overview
 [ms-sign-up]: https://www.microsoft.com/cognitive-services/en-us/sign-up
+[example-gif]: https://raw.githubusercontent.com/patrykpacewicz/face-recognition-poc/master/doc/gif/pwmfXfAxSO.gif
