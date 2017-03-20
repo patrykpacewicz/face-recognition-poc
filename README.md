@@ -51,10 +51,10 @@ npm run watch
 
 TODO
  - update README
+  -- add errors info in views
   -- spring-boot as proxy
   -- Only working on SSL:
     --- https://www.drissamri.be/blog/java/enable-https-in-spring-boot/
- - add errors info in views
  - add unit tests to view
 
 [app]: http://localhost:8080/

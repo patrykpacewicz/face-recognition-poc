@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link changes the class when hovered 1`] = `
+<div
+  style={
+    Object {
+      "WebkitTapHighlightColor": "rgba(0,0,0,0)",
+      "backgroundColor": "#ffffff",
+      "borderRadius": "2px",
+      "boxShadow": "0 10px 30px rgba(0, 0, 0, 0.19),
+             0 6px 10px rgba(0, 0, 0, 0.23)",
+      "boxSizing": "border-box",
+      "color": "rgba(0, 0, 0, 0.87)",
+      "fontFamily": "Roboto, sans-serif",
+      "muiPrepared": true,
+      "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "muiPrepared": true,
+        "padding": "0px 0px 8px 0px",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "boxSizing": "border-box",
+          "color": "rgba(0, 0, 0, 0.54)",
+          "fontSize": 14,
+          "fontWeight": 500,
+          "lineHeight": "48px",
+          "muiPrepared": true,
+          "paddingLeft": 16,
+          "width": "100%",
+        }
+      }
+    >
+      
+    </div>
+    <div>
+      <span
+        disabled={undefined}
+        href={undefined}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchEnd={[Function]}
+        onTouchStart={[Function]}
+        onTouchTap={[Function]}
+        open={null}
+        style={
+          Object {
+            "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
+            "background": "none",
+            "backgroundColor": null,
+            "border": 10,
+            "boxSizing": "border-box",
+            "color": "rgba(0, 0, 0, 0.87)",
+            "cursor": "pointer",
+            "display": "block",
+            "fontFamily": "Roboto, sans-serif",
+            "fontSize": 16,
+            "fontWeight": "inherit",
+            "lineHeight": "16px",
+            "margin": 0,
+            "muiPrepared": true,
+            "outline": "none",
+            "padding": 0,
+            "position": "relative",
+            "textDecoration": "none",
+            "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+            "verticalAlign": null,
+          }
+        }
+        tabIndex={0}
+      >
+        <div
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            style={
+              Object {
+                "marginLeft": 0,
+                "muiPrepared": true,
+                "paddingBottom": 16,
+                "paddingLeft": 72,
+                "paddingRight": 16,
+                "paddingTop": 16,
+                "position": "relative",
+              }
+            }
+          >
+            <div
+              className={undefined}
+              size={40}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(188, 188, 188)",
+                  "borderRadius": "50%",
+                  "color": "#ffffff",
+                  "display": "inline-flex",
+                  "fontSize": 20,
+                  "height": 40,
+                  "justifyContent": "center",
+                  "left": 16,
+                  "muiPrepared": true,
+                  "position": "absolute",
+                  "top": 16,
+                  "userSelect": "none",
+                  "width": 40,
+                }
+              }
+            />
+            <div
+              style={
+                Object {
+                  "muiPrepared": true,
+                }
+              }
+            >
+              Face: 1
+            </div>
+            <p
+              style={
+                Object {
+                  "WebkitBoxOrient": "vertical",
+                  "WebkitLineClamp": 2,
+                  "color": "rgba(0, 0, 0, 0.54)",
+                  "display": "-webkit-box",
+                  "fontSize": 14,
+                  "height": 36,
+                  "lineHeight": "18px",
+                  "margin": 0,
+                  "marginTop": 4,
+                  "muiPrepared": true,
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                  "whiteSpace": null,
+                }
+              }
+            >
+               
+              ""
+               
+            </p>
+          </div>
+        </div>
+      </span>
+    </div>
+  </div>
+</div>
+`;

@@ -2,7 +2,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/react/index.jsx',
+    entry: './src/main/react/index.jsx',
     output: {
         path: __dirname + '/build/resources/main/public',
         filename: 'static/[chunkhash:8].bundle.js',
@@ -14,7 +14,7 @@ module.exports = {
                 test: /\.jsx?$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
-                include: __dirname + '/src/react',
+                include: __dirname + '/src/main/react',
                 query: {
                     presets: ['es2015', 'react', 'stage-2']
                 }
