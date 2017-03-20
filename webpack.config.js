@@ -21,7 +21,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+                loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' })
             },
             {
                 test: /\.json$/,
@@ -30,7 +30,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.js', '.json', '.jsx', '']
+        extensions: ['.js', '.json', '.jsx']
     },
     plugins: [
         new ExtractTextPlugin('static/[contenthash:8].styles.css'),
