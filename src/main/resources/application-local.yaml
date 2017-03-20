@@ -1,0 +1,7 @@
+projectOxford:
+  subscriptionKey: "key-key-key-key"
+
+zuul:
+  routes:
+    face:
+      url: http://localhost:8099/face

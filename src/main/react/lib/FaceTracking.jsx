@@ -21,28 +21,28 @@ export default class FaceTracking {
   toogle = () => {
     if (this.isTrackingOn) { this.stop(); }
     else { this.start(); }
-  }
+  };
 
   start = () => {
     if (this.isTrackingOn) { return; }
     this.trackerTask.run();
     this.isTrackingOn = true;
-  }
+  };
 
   stop = () => {
     if (!this.isTrackingOn) { return; }
     this.trackerTask.stop();
     this.isTrackingOn = false;
     this.emiter.emit('track', []);
-  }
+  };
 
   onTrack = (fun) => {
     this.emiter.on('track', fun);
-  }
+  };
 
   onFaceChange = (fun) => {
     this.emiter.on('faceChange', fun);
-  }
+  };
 
   imageCapture = (position, size) => {
     let ww = position.width / size.width;

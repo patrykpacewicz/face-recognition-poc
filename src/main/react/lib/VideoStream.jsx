@@ -38,6 +38,7 @@ export default class VideoStream {
       element.play();
       this.isVideoOn = true;
     }, (error) => {
+      console.log(error);
       throw new Error("Error while starting video streaming: " + error.name);
     });
   }
